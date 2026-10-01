@@ -1,4 +1,4 @@
-function StudentCard({ name, major, score }) {
+function StudentCard({ id, name, major, score, onDelete }) {
   return (
     <div className="card">
       <h3>{name}</h3>
@@ -9,6 +9,7 @@ function StudentCard({ name, major, score }) {
           {score >= 60 ? "Passed" : "Failed"}
         </span>
       </p>
+      <button onClick={() => onDelete(id)}>Delete</button>
     </div>
   );
 }

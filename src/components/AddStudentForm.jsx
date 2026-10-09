@@ -13,7 +13,7 @@ function AddStudentForm({ onAdd }) {
       id: Date.now(),
       name: name.trim(),
       major: major.trim(),
-      score: Number(score),
+      score: Number(score)
     });
 
     setName("");
@@ -22,7 +22,7 @@ function AddStudentForm({ onAdd }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ marginBottom: "20px", display: "flex", gap: "8px" }}>
       <input
         type="text"
         placeholder="Name"
